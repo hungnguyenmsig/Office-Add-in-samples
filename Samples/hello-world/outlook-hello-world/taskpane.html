@@ -10,6 +10,7 @@
 <body>
     <p>This add-in will insert the text 'Hello world!' in a new message.</p>
     <button id="helloButton">Say hello</button>
+    <button id="helloButton2">Say hello</button>
 
     <!-- The following image URL tracks diagnostic data for this sample add-in. Please remove the image tag if you reuse this sample in your own code project. -->
     <img src="https://pnptelemetry.azurewebsites.net/pnp-officeaddins/samples/outlook-add-in-hello-world-run" />
@@ -20,6 +21,7 @@
     Office.onReady((info) => {
         if (info.host === Office.HostType.Outlook) {
             document.getElementById("helloButton").onclick = sayHello;
+            document.getElementById("helloButton2").onclick = sayHello;
         }
     });
 
